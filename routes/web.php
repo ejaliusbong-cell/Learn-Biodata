@@ -12,7 +12,6 @@ Route::get('/biodata', function () {
     return view('Biodata.biodata');
 });
 
-
 Route::prefix('{current_team}')
     ->middleware(['auth', 'verified', EnsureTeamMembership::class])
     ->group(function () {
